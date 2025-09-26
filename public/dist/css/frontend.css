@@ -1,0 +1,184 @@
+ 
+    /* Smooth scrolling effect */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background: url('/dist/assets/img/bb.avif') no-repeat center center/cover;
+        color: white;
+        height: 100vh; /* Full height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative; /* For click event handling */
+        cursor: pointer; 
+        padding: 15px; /* Reduced padding for the hero section */
+    }
+
+    /* Hero Section Headings */
+    .hero-section h1, .hero-section h2 {
+        color: white; /* Hero section headings in white */
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        z-index: 999; 
+        padding: 1.5rem 2.5rem; /* Reduced navbar padding */
+        transform: translateY(5px); /* Move the navbar up */
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly darker shadow for depth */
+    }
+
+    .navbar-brand img {
+        width: 70px; /* Decreased logo size */
+        height: auto; 
+    }
+
+    /* Nav link styling */
+    .nav-link {
+        margin-right: 30px;  
+        color: #333;  
+        font-weight: bold; 
+        font-size: 14px; 
+        font-family: 'Arial', sans-serif;  
+        text-transform: uppercase;  
+        transition: color 0.3s ease; 
+        text-decoration: none;  
+    }
+
+    .nav-link:hover {
+        color: #007bff;  
+        text-decoration: none;  
+    }
+
+    .nav-link.active {
+        color: #007bff; 
+        font-weight: bold; 
+    }
+
+    .nav-link.btn-danger {
+        display: inline-block; /* Ensure the button is always visible */
+        padding: 10px 20px; /* Padding for the button */
+        color: white; /* Text color */
+        background-color: red; /* Background color */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth background color transition */
+    }
+
+    .nav-link.btn-danger:hover {
+        background-color: darkred; /* Darker shade on hover */
+    }
+
+    .event-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    footer {
+        background: #222;
+        color: #ddd;
+        padding: 20px;  
+        text-align: center;  
+    }
+
+    #booking-section {
+        padding: 0;
+        margin: 0;
+    }
+
+    #booking-section .container {
+        margin-bottom: 0;
+    }
+
+    #events {
+        margin-top: -30px;
+    }
+
+    h1, h2 {
+        color: black;  
+        margin-bottom: 20px;  
+    }
+
+    .section-heading {
+        color: black;  
+    }
+
+    .btn {
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    }
+
+    .btn:hover {
+        transform: translateY(-2px); /* Lift effect on hover */
+    }
+
+    .event-card .card-body {
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Arrange items in a column */
+        justify-content: space-between; /* Space between title/description and button */
+        height: 100%; /* Allow the card to occupy full height */
+    }
+
+    /* Transition effect for cards */
+    .event-card {
+        position: relative; /* Set position for pseudo-element */
+        overflow: hidden; /* Prevent overflow of pseudo-element */
+        border: 1px solid #ddd; /* Optional: Add border to card */
+        border-radius: 8px; /* Optional: Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+        transition: transform 0.2s; /* Smooth transition for scale effect */
+    }
+
+    /* Pseudo-element for hover effect */
+    .event-card::after {
+        content: ""; /* Create a pseudo-element for the line effect */
+        position: absolute;
+        bottom: 10px; /* Position at the bottom of the card */
+        left: 50%;
+        transform: translateX(-50%); /* Center the line */
+        width: 0; /* Initially hide the line */
+        height: 3px; /* Line height */
+        background-color: pink; /* Line color */
+        transition: width 0.4s ease; /* Smooth transition for width */
+    }
+
+    /* Hover effect for card */
+    .event-card:hover::after {
+        width: 100%; /* Expand the line to full width on hover */
+    }
+
+    /* Optional: Scale effect on hover */
+    .event-card:hover {
+        transform: scale(1.02); /* Slightly enlarge the card on hover */
+    }
+
+    .small-btn {
+        padding: 5px 10px; /* Reduced padding for a smaller button */
+        font-size: 14px; /* Smaller font size */
+        border-radius: 5px; /* Rounded corners */
+        background-color: black; /* Button background color black */
+        color: white; /* Text color white */
+        transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+    }
+
+    .small-btn:hover {
+        background-color: #444; /* Darker shade on hover */
+        color: white; /* White text color on hover */
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        background-color: rgba(255, 255, 255, 0.9); /* Light background for visibility */
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        top: 100%; /* Navbar ke neeche dropdown dikhne ka position */
+        text-align: center;
+        z-index: 1000; /* Ensure dropdown appears above other content */
+    }
+ 
